@@ -52,5 +52,15 @@ section {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 2.5em;
+    color: var(--TextColour);
+}
+
+.socials {
+    font-size: 5em;
+}
+
+.socials a {
+    color: var(--DarkBaseColour);
+    padding:1em .5em;
 }
