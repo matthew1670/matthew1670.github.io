@@ -1,10 +1,10 @@
 :root {
+    --offwhite: #FAF9F6;
     --TextColour: #172026;
-    --LightBaseColour: #5FCDD9;
-    --DarkestBaseColour: #027373;
-    --BaseColour: #04BFAD;
-    --DarkBaseColour: #04BF9D;
-    --BaseFontSize: 14px;
+    --LightColour: #5FCDD9;
+    --baseColour:#ffffff;
+    --darkColour: #027373;
+    --BaseFontSize: 16px;
     --BaseFontFamily: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -14,33 +14,7 @@ body {
     font-size: var(--BaseFontSize);
     font-family: var(--BaseFontFamily);
     color: var(--TextColour);
-}
-
-
-
-/* Add a black background color to the top navigation */
-nav {
-    background-image: linear-gradient(to right, var(--BaseColour), var(--LightBaseColour));
-    display: flex;
-    justify-content: right;
-}
-
-nav a {
-    display: block;
-    color: var(--TextColour);
-    text-align: center;
-    padding: 1em;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background-color: var(--BaseColour);
-    color: #ffffff;
-}
-
-nav a.active {
-    background-color: var(--DarkestBaseColour);
-    color: white;
+    background-color: var(--offwhite);
 }
 
 section {
@@ -51,16 +25,39 @@ section {
     align-items: center;
 }
 
-h1 {
+h1.title {
     font-size: 2.5em;
-    color: var(--TextColour);
+    color: var(--darkColour);
+    border-bottom:5px solid;
+    padding: 0;
+    margin: 0;
 }
 
-.socials {
-    font-size: 5em;
+p.subheading {
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0.5em;
+}
+
+.socials h2 {
+    text-align: center;
 }
 
 .socials a {
-    color: var(--DarkBaseColour);
-    padding:1em .5em;
+    font-size: 10vw;
+    color: var(--LightColour);
+    padding: 0 .25em;
+    transition: color .5s ease-in-out;
+}
+
+.socials a:hover {
+    color: var(--darkColour);
+}
+
+.swiper{
+    max-width: 600px;
+}
+
+.swiper img{
+    max-width: 100%;
 }
