@@ -1,10 +1,12 @@
+/** @format */
+
 :root {
+    --offwhite: #faf9f6;
     --TextColour: #172026;
-    --LightBaseColour: #5FCDD9;
-    --DarkestBaseColour: #027373;
-    --BaseColour: #04BFAD;
-    --DarkBaseColour: #04BF9D;
-    --BaseFontSize: 14px;
+    --LightColour: #5fcdd9;
+    --baseColour: #ffffff;
+    --darkColour: #027373;
+    --BaseFontSize: 16px;
     --BaseFontFamily: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -14,33 +16,7 @@ body {
     font-size: var(--BaseFontSize);
     font-family: var(--BaseFontFamily);
     color: var(--TextColour);
-}
-
-
-
-/* Add a black background color to the top navigation */
-nav {
-    background-image: linear-gradient(to right, var(--BaseColour), var(--LightBaseColour));
-    display: flex;
-    justify-content: right;
-}
-
-nav a {
-    display: block;
-    color: var(--TextColour);
-    text-align: center;
-    padding: 1em;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background-color: var(--BaseColour);
-    color: #ffffff;
-}
-
-nav a.active {
-    background-color: var(--DarkestBaseColour);
-    color: white;
+    background-color: var(--offwhite);
 }
 
 section {
@@ -49,18 +25,118 @@ section {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-h1 {
+a {
+    color: var(--LightColour);
+}
+
+section:first {
+    background-color: #eeee;
+}
+
+h1.title {
     font-size: 2.5em;
-    color: var(--TextColour);
+    color: var(--darkColour);
+    border-bottom: 5px solid;
+    padding: 0;
+    margin: 0;
 }
 
-.socials {
-    font-size: 5em;
+p.subheading {
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0.5em;
+}
+
+.socials h2 {
+    text-align: center;
 }
 
 .socials a {
-    color: var(--DarkBaseColour);
-    padding:1em .5em;
+    font-size: 10vw;
+    color: var(--LightColour);
+    padding: 0 0.25em;
+    transition: color 0.5s ease-in-out;
+}
+
+.socials a:hover {
+    color: var(--darkColour);
+}
+
+.swiper {
+    --swiper-theme-color: var(--darkColour);
+    --swiper-scrollbar-border-radius: 10px;
+    --swiper-scrollbar-top: auto;
+    --swiper-scrollbar-bottom: 0px;
+    --swiper-scrollbar-left: auto;
+    --swiper-scrollbar-right: 4px;
+    --swiper-scrollbar-sides-offset: 1%;
+    --swiper-scrollbar-bg-color: rgba(0, 0, 0, 0.1);
+    --swiper-scrollbar-drag-bg-color: rgba(0, 0, 0, 0.5);
+    --swiper-scrollbar-size: 10px;
+
+    --swiper-pagination-color: var(--swiper-theme-color);
+    --swiper-pagination-left: auto;
+    --swiper-pagination-right: 0px;
+    --swiper-pagination-bottom: 0px;
+    --swiper-pagination-top: auto;
+    --swiper-pagination-fraction-color: inherit;
+    --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.25);
+    --swiper-pagination-progressbar-size: 10px;
+
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 10px;
+    --swiper-pagination-bullet-vertical-gap: 10px;
+
+    --swiper-navigation-size: 44px;
+    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-sides-offset: 0px;
+    --swiper-navigation-color: var(--swiper-theme-color);
+
+    max-width: 1200px;
+    width: 100%;
+}
+
+.swiper .swiper-pagination {
+    position: relative;
+}
+
+.swiper .swiper-scrollbar {
+    position: relative;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: background-color 0.3s ease-in-out;
+    padding-top: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+}
+
+.swiper .swiper-button-prev {
+    padding-left: 0.25em;
+}
+
+.swiper .swiper-button-next {
+    padding-right: 0.25em;
+}
+
+.swiper .swiper-button-prev:hover,
+.swiper .swiper-button-next:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.swiper img {
+    max-width: 100%;
 }
