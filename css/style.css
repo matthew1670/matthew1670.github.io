@@ -1,142 +1,196 @@
 /** @format */
 
 :root {
-    --offwhite: #faf9f6;
-    --TextColour: #172026;
-    --LightColour: #5fcdd9;
-    --baseColour: #ffffff;
-    --darkColour: #027373;
-    --BaseFontSize: 16px;
-    --BaseFontFamily: Verdana, Geneva, Tahoma, sans-serif;
+  --offwhite: #faf9f6;
+  --TextColour: var(--offwhite);
+  --LightColour: #5fcdd9;
+  --baseColour: #ffffff;
+  --darkColour: #027373;
+  --BaseFontSize: 16px;
+  --BaseFontFamily: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-size: var(--BaseFontSize);
-    font-family: var(--BaseFontFamily);
-    color: var(--TextColour);
-    background-color: var(--offwhite);
+  margin: 0;
+  padding: 0;
+  font-size: var(--BaseFontSize);
+  font-family: var(--BaseFontFamily);
+  color: var(--TextColour);
+  background-color: #063636;
+}
+
+.inner {
+  max-width: 1200px;
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 1em;
 }
 
 section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
 }
 
 a {
-    color: var(--LightColour);
+  color: var(--offwhite);
 }
 
-section:first {
-    background-color: #eeee;
+h1 {
+  font-size: 2.5em;
+  color: var(--offwhite);
+  margin-bottom: 0.5em;
 }
 
-h1.title {
-    font-size: 2.5em;
-    color: var(--darkColour);
-    border-bottom: 5px solid;
-    padding: 0;
-    margin: 0;
+p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+section#home {
+  background-size: cover;
+  background-position: bottom center;
+  background-color: #172026;
+  background-image: url("../images/Background/homeBackgroundM.jpg");
+  display: grid;
+  align-items: center;
+}
+
+@media screen and (min-height: 640px), screen and (min-width: 640px) {
+  section#home {
+    background-image: url("../images/Background/homeBackgroundM.jpg");
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  section#home {
+    background-image: url("../images/Background/homeBackgroundM.jpg");
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  section#home {
+    background-image: url("../images/Background/homeBackgroundS.jpg");
+  }
+}
+
+section#home .nextArrow {
+    position: absolute;
+    text-align: center;
+    font-size: 2em;
+    bottom: 1em;
+    right: 1em;
+    left: 1em;
+    transition: all 300ms ease-in-out;
+}
+section#home .nextArrow:hover {
+    font-size: 2.2em;
 }
 
 p.subheading {
-    font-size: 1.25em;
-    margin: 0;
-    padding: 0.5em;
+  font-size: 1.25em;
+  padding: 0.5em;
 }
 
-.socials h2 {
-    text-align: center;
+.socials a i {
+font-size: clamp(50px, 10vw, 100px);
+  padding: 0 0.25em;
+  transition: transform 300ms ease-in-out;
 }
 
-.socials a {
-    font-size: 10vw;
-    color: var(--LightColour);
-    padding: 0 0.25em;
-    transition: color 0.5s ease-in-out;
-}
-
-.socials a:hover {
-    color: var(--darkColour);
+.socials a:hover i {
+  transform: scale(1.1);
 }
 
 .swiper {
-    --swiper-theme-color: var(--darkColour);
-    --swiper-scrollbar-border-radius: 10px;
-    --swiper-scrollbar-top: auto;
-    --swiper-scrollbar-bottom: 0px;
-    --swiper-scrollbar-left: auto;
-    --swiper-scrollbar-right: 4px;
-    --swiper-scrollbar-sides-offset: 1%;
-    --swiper-scrollbar-bg-color: rgba(0, 0, 0, 0.1);
-    --swiper-scrollbar-drag-bg-color: rgba(0, 0, 0, 0.5);
-    --swiper-scrollbar-size: 10px;
-
-    --swiper-pagination-color: var(--swiper-theme-color);
-    --swiper-pagination-left: auto;
-    --swiper-pagination-right: 0px;
-    --swiper-pagination-bottom: 0px;
-    --swiper-pagination-top: auto;
-    --swiper-pagination-fraction-color: inherit;
-    --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.25);
-    --swiper-pagination-progressbar-size: 10px;
-
-    --swiper-pagination-bullet-size: 10px;
-    --swiper-pagination-bullet-width: 10px;
-    --swiper-pagination-bullet-height: 10px;
-    --swiper-pagination-bullet-inactive-color: #000;
-    --swiper-pagination-bullet-inactive-opacity: 0.2;
-    --swiper-pagination-bullet-opacity: 1;
-    --swiper-pagination-bullet-horizontal-gap: 10px;
-    --swiper-pagination-bullet-vertical-gap: 10px;
-
-    --swiper-navigation-size: 44px;
-    --swiper-navigation-top-offset: 50%;
-    --swiper-navigation-sides-offset: 0px;
-    --swiper-navigation-color: var(--swiper-theme-color);
-
-    max-width: 1200px;
-    width: 100%;
+  --swiper-theme-color: var(--darkColour);
+  --swiper-scrollbar-border-radius: 10px;
+  --swiper-scrollbar-top: auto;
+  --swiper-scrollbar-bottom: 0px;
+  --swiper-scrollbar-left: auto;
+  --swiper-scrollbar-right: 4px;
+  --swiper-scrollbar-sides-offset: 1%;
+  --swiper-scrollbar-bg-color: rgba(0, 0, 0, 0.1);
+  --swiper-scrollbar-drag-bg-color: rgba(0, 0, 0, 0.5);
+  --swiper-scrollbar-size: 10px;
+  --swiper-pagination-color: var(--swiper-theme-color);
+  --swiper-pagination-left: auto;
+  --swiper-pagination-right: 0px;
+  --swiper-pagination-bottom: 0px;
+  --swiper-pagination-top: auto;
+  --swiper-pagination-fraction-color: inherit;
+  --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.25);
+  --swiper-pagination-progressbar-size: 10px;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-height: 10px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 10px;
+  --swiper-pagination-bullet-vertical-gap: 10px;
+  --swiper-navigation-size: 44px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 0px;
+  --swiper-navigation-color: var(--swiper-theme-color);
+  max-width: 1200px;
+  width: 100%;
 }
 
 .swiper .swiper-pagination {
-    position: relative;
+  position: relative;
 }
 
 .swiper .swiper-scrollbar {
-    position: relative;
+  position: relative;
 }
 
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
-    background-color: rgba(255, 255, 255, 0.25);
-    transition: background-color 0.3s ease-in-out;
-    padding-top: 0.5em;
-    padding-right: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 0.5em;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: background-color 0.3s ease-in-out;
+  padding-top: 0.5em;
+  padding-right: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
 }
 
 .swiper .swiper-button-prev {
-    padding-left: 0.25em;
+  padding-left: 0.25em;
 }
 
 .swiper .swiper-button-next {
-    padding-right: 0.25em;
+  padding-right: 0.25em;
 }
 
 .swiper .swiper-button-prev:hover,
 .swiper .swiper-button-next:hover {
-    background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .swiper img {
-    max-width: 100%;
+  max-width: 100%;
 }
