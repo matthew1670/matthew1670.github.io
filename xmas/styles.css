@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --base-Color: hsl(104, 74%, 25%);
+    --text: hsl(0, 0%, 100%);
+    --muted: hsl(from var(--text) h s 80%);
+    --cardBackground: hsl(from var(--base-Color) h s l / 0.9);
+    --accentColour: hsl(46, 65%, 52%);
+    --accentText: hsl(41, 69%, 6%);
+    --cardBorder: var(--accentColour);
+
+    --animate-duration: 1s;
+    --animate-delay: 0s;
+}
+
+/* page background */
+
+html,
+body, 
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: hsl( from var(--base-Color) h s l );
+    font-size: 1rem;
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.card {
+    max-width: 620px;
+    width: 90%;
+    background: var(--cardBackground);
+    text-align: center;
+    z-index: 1;
+    & #intro,
+    & #gift
+    {
+        padding: 22px;
+        border-radius: 18px;
+        border: 1px solid var(--cardBorder);
+    }
+}
+
+.iconCircle {
+    width: 2.25em;
+    height: 2.25em;
+    margin: 0.25em auto;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.30);
+    font-size: 2em;
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: 2em;
+}
+
+h2 {
+    margin: 10px 0 6px;
+    font-size: 1.9em;
+    font-family: 'Limelight', cursive;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+
+p {
+    line-height: 1.55em;
+    color: var(--muted);
+}
+
+.lead {
+    font-size: 1.5em;
+    color: var(--accentColour);
+}
+
+
+button {
+    border: 0;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-weight: 800;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--accentColour), hsl(from var(--accentColour) h s 80%));
+    color: var(--accentText);
+}
+
+button:hover {
+    box-shadow: 0 0 18px hsl(from var(--accentColour) h s 80%);
+
+}
+
+.gift {
+    margin-top: 8px;
+    padding-top: 4px;
+}
+
+.heroImage img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    margin: 14px 0;
+    background: linear-gradient(90deg, transparent, var(--accentColour), transparent);
+}
+
+.details {
+    display: grid;
+    gap: 10px;
+    text-align: left;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.detailRow {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.badge {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: rgba(46, 125, 91, 0.14);
+    border: 1px solid rgba(46, 125, 91, 0.28);
+}
+
+.detailTitle {
+    font-size: 12px;
+    opacity: .8;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+
+.detailValue {
+    font-size: 15px;
+    font-weight: 800;
+    color: rgba(245, 247, 250, 0.95);
+}
+
+.message {
+    text-align: left;
+    max-width: 520px;
+    margin: 0 auto;
+}
