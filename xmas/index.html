@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Christmas Gift</title>
+</head>
+
+<body>
+    <main>
+        <div class="card" role="main">
+            <div id="intro" class="intro animate__animated animate__fadeIn">
+                <div class="iconCircle" aria-hidden="true"
+                    class="animate__animated animate__heartBeat animate__infinite">🎁</div>
+                <h1>A little Christmas gift…</h1>
+                <p class="lead">
+                    Click the button when you're ready for the reveal.
+                </p>
+                <button id="revealBtn" type="button"
+                    class="animate__animated animate__pulse animate__infinite animate__slower">Reveal your gift</button>
+            </div>
+
+
+            <div id="gift" class="gift animate__animated animate__backInDown" aria-live="polite" hidden>
+
+                <div class="heroImage" role="img" aria-label="Hercules title artwork">
+                    <img src="images/banner.png" alt="">
+                </div>
+                <h2>You're going to London!</h2>
+
+                <p class="lead">
+                    To see a show of your choice!
+                </p>
+
+                <div class="divider"></div>
+
+                <section class="details" aria-label="Gift details">
+                    <div class="detailRow">
+                        <span class="badge">🗒️</span>
+                        <div>
+                            <div class="detailTitle">A Gift For</div>
+                            <div class="detailValue">My Wife</div>
+                        </div>
+                    </div>
+                    <div class="detailRow">
+                        <span class="badge">🎟️</span>
+                        <div>
+                            <div class="detailTitle">Tickets</div>
+                            <div class="detailValue">2</div>
+                        </div>
+                    </div>
+
+                    <div class="detailRow">
+                        <span class="badge">📅</span>
+                        <div>
+                            <div class="detailTitle">Date</div>
+                            <div class="detailValue">To be confirmed</div>
+                        </div>
+                    </div>
+
+                    <div class="detailRow">
+                        <span class="badge">📍</span>
+                        <div>
+                            <div class="detailTitle">Where</div>
+                            <div class="detailValue">London (West End)</div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="divider"></div>
+            </div>
+        </div>
+    </main>
+
+    <canvas id="snow"></canvas>
+    <script src="script.js"></script>
+</body>
+
+</html>
