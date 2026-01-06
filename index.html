@@ -1,119 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Get ready for a wild ride on Matthew Wood's digital journey! His personal website is all about showing off his web skills in a way that's both fun and professional."
-    />
-    <meta name="keywords" content="Matthew Wood, Personal Website, " />
-    <meta name="author" content="Matthew Wood" />
-    <link rel="canonical" href="https://matthewwood.me/" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="MatthewWood.me | Personal Website" />
-    <meta
-      property="og:description"
-      content="Get ready for a wild ride on Matthew Wood's digital journey! His personal website is all about showing off his web skills in a way that's both fun and professional."
-    />
-    <meta
-      property="og:image"
-      content="https://matthewwood.me/images/logo.png"
-    />
-    <meta
-      property="twitter:title"
-      content="MatthewWood.me | Personal Website"
-    />
-    <meta
-      property="twitter:description"
-      content="Get ready for a wild ride on Matthew Wood's digital journey! His personal website is all about showing off his web skills in a way that's both fun and professional."
-    />
-    <meta
-      property="twitter:image"
-      content="https://matthewwood.me/images/logo.png"
-    />
-    <title>Matthew Wood | Personal Site</title>
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-    <section id="home">
-      <div class="inner">
-        <h1 class="title">Matthew Wood</h1>
-        <div class="socials">
-          <a
-            href="http://www.github.com/matthew1670"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Link to Matthew's Github"
-            ><i class="fa-brands fa-github-square"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/matthewwood3/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Link to Matthew's Linkedin"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-        </div>
-        <a href="#about" class="nextArrow" aria-label="Go to about me section"
-          ><i class="fa-solid fa-arrow-down"></i
-        ></a>
-      </div>
-    </section>
-    <section id="about">
-      <div class="inner">
-        <h1>About Me</h1>
-        <p>
-          I'm an accomplished Professional Services Team Lead with a strong
-          track record in the information technology and services industry. My
-          skill set encompasses JavaScript, HTML, and CSS, coupled with a solid
-          foundation in Python programming. I hold a Bachelor's Degree in
-          computer networks and web design from Southampton Solent University.
-        </p>
-        <p>
-          Currently, I'm thriving as a Professional Services Team Lead at Fresh
-          Relevance, where I apply my technical expertise and leadership acumen
-          to drive successful project outcomes. In this role, I've honed my
-          abilities in client engagement, project management, and team
-          leadership within the dynamic realm of marketing technology and
-          personalization solutions.
-        </p>
-      </div>
-    </section>
-    <section id="contact">
-      <div class="inner">
-        <h1>Get In Touch</h1>
-        <form action="" method="post">
-          <label for="name">Your Name</label
-          ><input type="text" id="name" name="name" />
-          <label for="message">Your Message</label
-          ><textarea type="text" id="message" name="message"></textarea>
-        </form>
-      </div>
-    </section>
-    <script
-      src="https://kit.fontawesome.com/b1e7838046.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/js/main.js"></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7S4ZPDHS7G"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-31CLVEWGKL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html lang="en-GB">
 
-  gtag('config', 'G-31CLVEWGKL');
-</script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description"
+    content="Get ready for a wild ride on Matthew Wood's digital journey! His personal website is all about showing off his web skills in a way that's both fun and professional." />
+  <meta name="keywords" content="Matthew Wood, Personal Website" />
+  <meta name="author" content="Matthew Wood" />
+  <link rel="canonical" href="https://matthewwood.me/" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="MatthewWood.me | Personal Website" />
+  <meta property="og:description"
+    content="Get ready for a wild ride on Matthew Wood's digital journey! His personal website is all about showing off his web skills in a way that's both fun and professional." />
+  <meta property="og:image" content="https://matthewwood.me/images/logo.png" />
+
+  <meta property="twitter:title" content="MatthewWood.me | Personal Website" />
+  <meta property="twitter:description"
+    content="Get ready for a wild ride on Matthew Wood's digital journey! His personal website is all about showing off his web skills in a way that's both fun and professional." />
+  <meta property="twitter:image" content="https://matthewwood.me/images/logo.png" />
+
+  <title>Matthew Wood | Personal Site</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">My Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="home" aria-labelledby="home-title">
+      <div class="inner">
+        <h1 id="home-title" class="title">Matthew Wood</h1>
+
+        <nav class="socials" aria-label="Social links">
+          <ul>
+            <li>
+              <a href="http://www.github.com/matthew1670" target="_blank" rel="noopener noreferrer"
+                aria-label="Matthew on GitHub" title="Link to Matthew's GitHub">
+                <i class="fa-brands fa-github-square" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/matthewwood3/" target="_blank" rel="noopener noreferrer"
+                aria-label="Matthew on LinkedIn" title="Link to Matthew's LinkedIn">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <p>
+          <a class="nextArrow" href="#about" aria-label="Go to about me section">
+            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <div class="inner">
+      <header>
+        <h2 id="about-title">About me</h2>
+      </header>
+
+      <p>Hey, I'm <strong>Matthew</strong> 👋</p>
+
+      <p>
+        I'm a web developer who enjoys building things that actually work and don't
+        make people swear at their screens. I spend most of my time working with
+        web tech, solving awkward problems, and turning half-formed ideas into
+        finished products.
+      </p>
+
+      <p>
+        By day, I work in the world of marketing technology — a mix
+        of front-end development and figuring out why
+        something broke five minutes before a deadline. I like clean code, simple
+        solutions, and understanding <em>why</em> things work (or don't).
+      </p>
+
+      <p>This site is mostly a place for:</p>
+      <ul>
+        <li>Projects I've built (or broken and fixed)</li>
+        <li>Experiments and side ideas</li>
+        <li>Notes and things I've learned the hard way</li>
+        <li>Anything I'm currently nerding out over</li>
+      </ul>
+
+      <p>
+        Outside of web stuff, I'm usually tinkering with electronics, ESP boards,
+        LEDs, or some other “this should be simple” project that absolutely isn't.
+      </p>
+
+      <p>
+        If you've got an idea, a problem, or just want to talk tech —
+        <a href="mailto:hello@matthewwood.me">feel free to get in touch</a>.
+      </p>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="inner">
+        <header>
+          <h2 id="projects-title">My Projects</h2>
+        </header>
+
+        <p>Here are some of my personal projects that I've worked on in my free time:</p>
+
+        <ul>
+          <li>
+            <article aria-labelledby="project-personal-website-title">
+              <h3 id="project-personal-website-title">Personal Website</h3>
+              <p>This website you're currently viewing — built with HTML, CSS, JS.</p>
+            </article>
+          </li>
+
+          <li>
+            <article aria-labelledby="project-f1-news-hub-title">
+              <h3 id="project-f1-news-hub-title">F1 News Hub</h3>
+              <p>A web app aggregating Formula 1 news (Next.js + Tailwind).</p>
+              <a href="https://f1.matthewwood.me" target="_blank" class="btn">View Project</a>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; <span id="year">2026</span> Matthew Wood</small>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/b1e7838046.js" crossorigin="anonymous"></script>
+  <script src="/js/main.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7S4ZPDHS7G"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-31CLVEWGKL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-31CLVEWGKL");
+
+    // Optional: keep footer year current without touching HTML yearly
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  </script>
+</body>
+
 </html>
