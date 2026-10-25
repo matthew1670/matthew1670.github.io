@@ -7,7 +7,9 @@
 <link rel="canonical" href="https://matthewwood.me/privacy.html">
 <title>Privacy &amp; analytics | Matthew Wood</title>
 <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/css/style.css">
+<link rel="preload" href="/css/style.css" as="style" fetchpriority="high">
+<link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'; this.onload=null;">
+<noscript><link rel="stylesheet" href="/css/style.css"></noscript>
 <script src="/js/main.js" defer></script>
 </head>
 <body>
@@ -26,7 +28,7 @@
 <section class="analytics-settings" aria-labelledby="analytics-title">
 <h2 id="analytics-title">Your analytics choice</h2>
 <p id="analytics-status" role="status" aria-live="polite">Analytics is off unless you’ve already turned it on in this browser.</p>
-<div class="actions"><button class="button" id="analytics-enable" type="button" hidden>Turn analytics on</button><button class="button button-secondary" id="analytics-disable" type="button" hidden>Turn analytics off</button></div>
+<div class="actions"><button class="button" id="analytics-enable" type="button" aria-pressed="false" hidden>Turn analytics on</button><button class="button button-secondary" id="analytics-disable" type="button" aria-pressed="true" hidden>Turn analytics off</button></div>
 <noscript><p>JavaScript is off in your browser, so analytics won’t load.</p></noscript>
 </section>
 <h2>Hosting and other websites</h2>
