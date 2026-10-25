@@ -10,18 +10,28 @@ try {
   // If browser storage is unavailable, keep analytics off.
 }
 
+function scheduleWhenIdle(callback) {
+  if (window.requestIdleCallback) {
+    window.requestIdleCallback(callback);
+    return;
+  }
+  setTimeout(callback, 50);
+}
+
 function loadAnalytics() {
-  window[`ga-disable-${analyticsId}`] = false;
-  if (document.getElementById('analytics-script')) return;
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function () { window.dataLayer.push(arguments); };
-  window.gtag('js', new Date());
-  window.gtag('config', analyticsId);
-  const script = document.createElement('script');
-  script.id = 'analytics-script';
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${analyticsId}`;
-  document.head.appendChild(script);
+  scheduleWhenIdle(() => {
+    window[`ga-disable-${analyticsId}`] = false;
+    if (document.getElementById('analytics-script')) return;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', analyticsId);
+    const script = document.createElement('script');
+    script.id = 'analytics-script';
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${analyticsId}`;
+    document.head.appendChild(script);
+  });
 }
 
 function clearAnalyticsCookies() {
@@ -38,8 +48,17 @@ function clearAnalyticsCookies() {
 }
 
 const statusElement = document.getElementById('analytics-status');
+function updateAnalyticsToggles() {
+  const enableButton = document.getElementById('analytics-enable');
+  const disableButton = document.getElementById('analytics-disable');
+
+  if (enableButton) enableButton.setAttribute('aria-pressed', String(analyticsEnabled));
+  if (disableButton) disableButton.setAttribute('aria-pressed', String(!analyticsEnabled));
+}
+
 function updateAnalyticsStatus() {
   if (statusElement) statusElement.textContent = `Analytics is ${analyticsEnabled ? 'on' : 'off'} in this browser.`;
+  updateAnalyticsToggles();
 }
 
 function setAnalyticsPreference(enabled) {
